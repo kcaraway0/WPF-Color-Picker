@@ -1,0 +1,32 @@
+﻿<Window x:Class="WPF_Color_Picker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Color_Picker"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel>
+            <Slider Minimum="0" Maximum="255" Value="{Binding RedValue, Mode=TwoWay}" TickFrequency="1" />
+            <Slider Minimum="0" Maximum="255" Value="{Binding GreenValue, Mode=TwoWay}" TickFrequency="1" />
+            <Slider Minimum="0" Maximum="255" Value="{Binding BlueValue, Mode=TwoWay}" TickFrequency="1" />
+            <Border Background="{Binding ColorBrush}" Height="100" Width="100" Margin="10"/>
+        </StackPanel>
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>
